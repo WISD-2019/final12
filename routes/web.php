@@ -18,3 +18,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/taipei', 'TaipeiController@index');
+Route::get('/taichung', 'TaichungController@index');
+Route::get('/kaohsiung', 'KaohsiungController@index');
