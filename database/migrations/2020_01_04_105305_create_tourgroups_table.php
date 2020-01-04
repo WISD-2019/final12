@@ -17,6 +17,9 @@ class CreateTourgroupsTable extends Migration
             $table->bigIncrements('id');
             $table->timestamps();
             $table->integer('tourcase_id');
+            $table->integer('tourgrouptop');
+            $table->integer('tourgrouplow');
+            $table->integer('tourgroupdate');
         });
     }
 
