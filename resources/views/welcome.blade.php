@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>Go Travel</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -12,16 +12,18 @@
         <!-- Styles -->
         <style>
             html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Nunito', sans-serif;
-                font-weight: 200;
+                background-image: url('/img/index01.jpg');
+                background-size:100%;
+                background-color:#b0d4f1;
+                color: blue;
+                font-family: 'DFKai-sb', sans-serif;
+                font-weight: 100;
                 height: 100vh;
                 margin: 0;
             }
 
             .full-height {
-                height: 100vh;
+                height: 50vh;
             }
 
             .flex-center {
@@ -45,13 +47,13 @@
             }
 
             .title {
-                font-size: 84px;
+                font-size: 200px;
             }
 
             .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 13px;
+                color:blue;
+                padding: 0 50px;
+                font-size: 25px;
                 font-weight: 600;
                 letter-spacing: .1rem;
                 text-decoration: none;
@@ -70,10 +72,10 @@
                     @auth
                         <a href="{{ url('/home') }}">Home</a>
                     @else
-                        <a href="{{ route('login') }}">Login</a>
+                        <a href="{{ route('login') }}">登入</a>
 
                         @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
+                            <a href="{{ route('register') }}">註冊</a>
                         @endif
                     @endauth
                 </div>
@@ -81,17 +83,13 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    Go Travel
                 </div>
 
                 <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                    <a href="https://laravel.com/docs">台北</a>
+                    <a href="https://laracasts.com">台中</a>
+                    <a href="https://laravel-news.com">高雄</a>
                 </div>
             </div>
         </div>
