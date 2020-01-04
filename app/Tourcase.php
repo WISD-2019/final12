@@ -8,6 +8,6 @@ class Tourcase extends Model
 {
     public function tourgroup()
     {
-        return $this->belongsTo(Tourgroup::class);
+        return $this->hasMany(Tourgroup::class);
     }
 }

@@ -12,7 +12,7 @@ class Tourgroup extends Model
     }
     public function tourcase()
     {
-        return $this->hasOne(Tourcase::class);
+        return $this->belongsTo(Tourcase::class);
     }
 
 }
