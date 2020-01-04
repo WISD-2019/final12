@@ -16,6 +16,7 @@ class CreateTourcasesTable extends Migration
         Schema::create('tourcases', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->timestamps();
+            $table->integer('tourgroup_id');
         });
     }
 

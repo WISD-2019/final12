@@ -14,5 +14,5 @@ class Staff extends Model
     {
         return $this->belongsTo(Tourcase::class);
     }
-   
+
 }

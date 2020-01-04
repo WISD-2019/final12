@@ -10,5 +10,9 @@ class Tourgroup extends Model
     {
         return $this->hasOne(Reservation::class);
     }
+    public function tourcase()
+    {
+        return $this->hasOne(Tourcase::class);
+    }
 
 }
