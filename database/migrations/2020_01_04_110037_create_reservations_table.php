@@ -20,6 +20,7 @@ class CreateReservationsTable extends Migration
             $table->integer('tourgroup_id');
             $table->integer('date');
             $table->integer('people');
+            $table->integer('area');
 
         });
     }
