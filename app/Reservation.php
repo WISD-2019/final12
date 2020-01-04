@@ -10,4 +10,8 @@ class Reservation extends Model
     {
         return $this->belongsTo(Member::class);
     }
+    public function animal()
+    {
+        return $this->belongsTo(Tourgroup::class);
+    }
 }
