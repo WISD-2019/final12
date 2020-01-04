@@ -87,9 +87,9 @@
                 </div>
 
                 <div class="links">
-                    <a href=>台北</a>
-                    <a href=>台中</a>
-                    <a href=>高雄</a>
+                    <a href=>預約行程</a>
+                    <a href=></a>
+                    <a href=></a>
                 </div>
             </div>
         </div>
