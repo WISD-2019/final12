@@ -10,7 +10,7 @@ class Member extends Model
     {
         return $this->belongsTo(User::class);
     }
-    public function adoption_applications()
+    public function reservations()
     {
         return $this->hasMany(Reservation::class);
     }

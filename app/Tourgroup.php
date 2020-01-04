@@ -6,8 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Tourgroup extends Model
 {
-    public function adoption_application()
+    public function reservation()
     {
         return $this->hasOne(Reservation::class);
     }
+
 }

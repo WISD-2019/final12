@@ -10,4 +10,9 @@ class Staff extends Model
     {
         return $this->belongsTo(User::class);
     }
+    public function tourcase()
+    {
+        return $this->belongsTo(Tourcase::class);
+    }
+   
 }

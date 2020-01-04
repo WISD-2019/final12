@@ -17,6 +17,7 @@ class CreateStaffTable extends Migration
             $table->bigIncrements('id');
             $table->timestamps();
             $table->integer('user_id');
+            $table->integer('torucase_id');
         });
     }
 

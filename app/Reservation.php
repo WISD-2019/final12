@@ -10,7 +10,7 @@ class Reservation extends Model
     {
         return $this->belongsTo(Member::class);
     }
-    public function animal()
+    public function tourgroup()
     {
         return $this->belongsTo(Tourgroup::class);
     }
