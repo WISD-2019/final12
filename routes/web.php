@@ -19,6 +19,6 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/taipei', 'TaipeiController@index');
-Route::get('/taichung', 'TaichungController@index');
-Route::get('/kaohsiung', 'KaohsiungController@index');
+Route::get('/Taipei', 'TaipeiController@index');
+Route::get('/Taichung', 'TaichungController@index');
+Route::get('/Kaohsiung', 'KaohsiungController@index');

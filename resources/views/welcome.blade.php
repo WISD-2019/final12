@@ -87,9 +87,9 @@
                 </div>
 
                 <div class="links">
-                    <a href="https://laravel.com/docs">台北</a>
-                    <a href="https://laracasts.com">台中</a>
-                    <a href="https://laravel-news.com">高雄</a>
+                    <a href=>台北</a>
+                    <a href=>台中</a>
+                    <a href=>高雄</a>
                 </div>
             </div>
         </div>
