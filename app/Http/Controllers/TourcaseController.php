@@ -4,17 +4,33 @@ namespace App\Http\Controllers;
 
 use App\Tourcase;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use App\Repositories\TourcaseRepository;
 
 class TourcaseController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * 建立一個新的控制器實例。
      *
-     * @return \Illuminate\Http\Response
+     * @return void
      */
-    public function index()
+    public function __construct(TourcaseRepository $tourcases)
     {
-        //
+        $this->middleware('auth');
+        $this->tourcases = $tourcases;
+    }
+
+    public function index(Request $request)
+
+    {
+        $tourcase = new Tourcase;
+        $tourcase->id = $request->input("id");
+        $tourcase->tourname = $request->input("tourname");
+        $tourcase->place = $request->input("place");
+        $tourcase->price = $request->input("price");
+        $tourcase->save();
+
+        return view('tourcase');
     }
 
     /**
@@ -22,21 +38,25 @@ class TourcaseController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function store(Request $request)
     {
-        //
-    }
+        $this->validate($request, [
+            'tourname' => 'required|max:255',
+        ]);
 
+        $request->user()->tasks()->create([
+            'tourname' => $request->name,
+        ]);
+
+        return redirect('/tourcases');
+    }
     /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
-    {
-        //
-    }
+
 
     /**
      * Display the specified resource.
@@ -78,8 +98,18 @@ class TourcaseController extends Controller
      * @param  \App\Tourcase  $tourcase
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Tourcase $tourcase)
+    /**
+     * 移除給定的任務。
+     *
+     * @param Request $request
+     * @param Task $task
+     * @return Response
+     */
+    public function destroy(Request $request, Tourcase $tourcase)
     {
-        //
+        $this->authorize('destroy', $tourcase);
+        $tourcase->delete();
+
+        return redirect('/tourcases');
     }
 }

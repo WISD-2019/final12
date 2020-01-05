@@ -10,8 +10,12 @@ class Member extends Model
     {
         return $this->belongsTo(User::class);
     }
-    public function reservations()
+    public function reservation()
     {
         return $this->hasMany(Reservation::class);
     }
+    protected $fillable = [
+        'user_id',
+        'name',
+        'phone',];
 }

@@ -17,6 +17,8 @@ class CreateMembersTable extends Migration
             $table->bigIncrements('id');
             $table->timestamps();
             $table->integer('user_id');
+            $table->string('phone')->nullable();
+            $table->string('name')->nullable();
         });
     }
 

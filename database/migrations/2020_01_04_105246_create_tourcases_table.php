@@ -14,13 +14,12 @@ class CreateTourcasesTable extends Migration
     public function up()
     {
         Schema::create('tourcases', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->increments('id');
+            $table->integer('staff_id')->nullable();
+            $table->integer('price')->nullable();
+            $table->string('place')->nullable();
+            $table->string('tourname')->nullable();
             $table->timestamps();
-            $table->integer('price');
-            $table->integer('place');
-            $table->integer('day');
-            $table->integer('tourname');
-
 
 
         });
@@ -33,6 +32,6 @@ class CreateTourcasesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tourcases');
+        Schema::drop('tourcases');
     }
 }

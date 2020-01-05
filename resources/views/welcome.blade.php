@@ -88,6 +88,7 @@
 
                 <div class="links">
                     <a href="{{route('reservation.index')}}">預約行程</a>
+                    <a href="{{route('tourcase.index')}}">前往後端</a>
                 </div>
             </div>
         </div>

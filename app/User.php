@@ -15,6 +15,8 @@ class User extends Authenticatable
      *
      * @var array
      */
+
+
     protected $fillable = [
         'name', 'email', 'password',
     ];
@@ -40,8 +42,8 @@ class User extends Authenticatable
     {
         return $this->hasOne(Member::class);
     }
-    public function staff()
+    public function tourcases()
     {
-        return $this->hasOne(Staff::class);
+        return $this->hasMany(tourcase::class);
     }
 }

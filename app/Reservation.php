@@ -12,6 +12,6 @@ class Reservation extends Model
     }
     public function tourgroup()
     {
-        return $this->belongsTo(Tourgroup::class);
+        return $this->hasOne(Tourgroup::class);
     }
 }

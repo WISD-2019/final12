@@ -17,7 +17,8 @@ class CreateReservationsTable extends Migration
             $table->bigIncrements('id');
             $table->integer('member_id');
             $table->integer('tourgroup_id');
-            $table->string('date');
+            $table->date('reservation_in');
+            $table->date('reservation_out');
             $table->string('people');
             $table->string('area');
             $table->timestamps();
