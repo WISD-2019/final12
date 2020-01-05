@@ -1,7 +1,9 @@
 <?php
 
 namespace App;
-
+use App\User;
+use App\Member;
+use App\Tourgroup;
 use Illuminate\Database\Eloquent\Model;
 
 class Reservation extends Model

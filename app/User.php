@@ -2,6 +2,9 @@
 
 namespace App;
 
+use App\Reservation;
+use App\Member;
+use App\Tourgroup;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;

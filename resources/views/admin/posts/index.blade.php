@@ -41,7 +41,7 @@
                 @foreach($member as $post)
                     <tr>
                         <td>{{$post->id}}</td>
-                        
+
 
                     </tr>
                 @endforeach
