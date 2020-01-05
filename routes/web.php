@@ -26,3 +26,15 @@ Route::get('tourcase',  ['as' => 'tourcase.index', 'uses' => 'TourcaseController
 
 Route::post('/tourcase', 'TourcaseController@store');
 Route::delete('/tourcase/{tourcase}', 'TourcaseController@destroy');
+
+// 後台
+Route::group(['prefix' => 'admin'], function() {
+    Route::get('/', ['as' => 'admin.dashboard.index', 'uses' => 'AdminDashboardController@index']);
+
+    Route::get('posts'          , ['as' => 'admin.posts.index' , 'uses' => 'AdminPostsController@index']);
+    Route::get('posts/create'   , ['as' => 'admin.posts.create', 'uses' => 'AdminPostsController@create']);
+    Route::post('posts',['as'=>'admin.posts.store','uses'=> 'AdminPostsController@store']);
+    Route::patch('posts/{id}',['as' => 'admin.posts.update', 'uses' => 'AdminPostsController@update']);
+    Route::delete('posts/{id}',['as'=>'admin.posts.destroy','uses'=>'AdminPostsController@destroy']);
+    Route::get('posts/{id}/edit', ['as' => 'admin.posts.edit'  , 'uses' => 'AdminPostsController@edit']);
+});
