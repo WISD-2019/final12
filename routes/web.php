@@ -38,3 +38,8 @@ Route::group(['prefix' => 'admin'], function() {
     Route::delete('posts/{id}',['as'=>'admin.posts.destroy','uses'=>'AdminPostsController@destroy']);
     Route::get('posts/{id}/edit', ['as' => 'admin.posts.edit'  , 'uses' => 'AdminPostsController@edit']);
 });
+// 前台
+Route::get('posts', ['as' => 'posts.index',   'uses' => 'PostsController@index']);
+Route::get('post',  ['as' => 'posts.show',    'uses' => 'PostsController@show']);
+Route::get('about',    ['as' => 'posts.about',   'uses' => 'PostsController@about']);
+Route::get('contact',  ['as' => 'posts.contact', 'uses' => 'PostsController@contact']);
