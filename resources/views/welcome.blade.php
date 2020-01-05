@@ -87,9 +87,7 @@
                 </div>
 
                 <div class="links">
-                    <a href=>預約行程</a>
-                    <a href=></a>
-                    <a href=></a>
+                    <a href="{{route('reservation.index')}}">預約行程</a>
                 </div>
             </div>
         </div>

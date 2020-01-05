@@ -18,7 +18,5 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('reservation',  ['as' => 'reservation.index',    'uses' => 'ReservationController@index']);
 
-Route::get('/reservation', 'ReservationController@index');
-Route::get('/Taichung', 'TaichungController@index');
-Route::get('/Kaohsiung', 'KaohsiungController@index');

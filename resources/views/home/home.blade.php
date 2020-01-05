@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Dashboard</div>
+                <div class="card-header">登入成功</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -13,8 +13,8 @@
                             {{ session('status') }}
                         </div>
                     @endif
-
-                    歡迎!!
+                    {{ Auth::user()->name }} 您好!<br><br>
+                    歡迎來到Go Travel!!
                 </div>
             </div>
         </div>
