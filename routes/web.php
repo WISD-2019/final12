@@ -14,9 +14,11 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/home', function () {
+    return view('home.home');
+});
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('reservation',  ['as' => 'reservation.index',    'uses' => 'ReservationController@index']);
-
