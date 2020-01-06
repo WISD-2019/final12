@@ -11,7 +11,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Tourcase extends Model
 {
-    protected $fillable = ['tourname'];
+    protected $table = 'tourcases';
+    protected $fillable = ['tourname','place','price',];
 
     public function staffs()
     {

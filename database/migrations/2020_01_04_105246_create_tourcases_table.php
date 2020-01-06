@@ -16,9 +16,9 @@ class CreateTourcasesTable extends Migration
         Schema::create('tourcases', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('staff_id')->nullable();
-            $table->integer('price')->nullable();
-            $table->string('place')->nullable();
-            $table->string('tourname')->nullable();
+            $table->string('price')->nullable();
+            $table->text('place')->nullable();
+            $table->text('tourname')->nullable();
             $table->timestamps();
 
 

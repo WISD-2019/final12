@@ -33,8 +33,9 @@
                     <tr>
                         <th width="30" style="text-align: center">#</th>
                         <th width="100" style="text-align: center">旅遊名稱</th>
-                        <th>地點內容說明</th>
+                        <th width="500" style="text-align: center">地點內容說明</th>
                         <th width="70" style="text-align: center">價錢</th>
+                        <th width="70" style="text-align: center">編輯/刪除</th>
 
                     </tr>
                 </thead>
@@ -42,7 +43,18 @@
                 @foreach($tourcase as $post)
                     <tr>
                         <td>{{$post->id}}</td>
-
+                        <td>{{$post->tourname}}</td>
+                        <td>{{($post->place)}}</td>
+                        <td>{{($post->price)}}</td>
+                        <td>
+                            <a href="{{route('admin.posts.edit',$post->id)}}">編輯</a>
+                            /
+                            <form action="{{ route('admin.posts.destroy', $post->id) }}" method="POST">
+                                {{ csrf_field() }}
+                                {{ method_field('DELETE') }}
+                                <button type="submit" class="btn btn-success">刪除</button>
+                            </form>
+                        </td>
 
                     </tr>
                 @endforeach

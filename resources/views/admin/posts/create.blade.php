@@ -29,7 +29,7 @@
 
             <div class="form-group">
                 <label>旅遊名稱：</label>
-                <input name="title" class="form-control" placeholder="請輸入旅遊名稱">
+                <input name="tourname" class="form-control" placeholder="請輸入旅遊名稱">
             </div>
 
             <div class="form-group">
