@@ -3,9 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Schedule;
+use App\Tourcase;
 use Illuminate\Http\Request;
 
-class ScheduleController extends Controller
+class AboutController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +15,10 @@ class ScheduleController extends Controller
      */
     public function index()
     {
-        //
+        $aa= Tourcase::all();
+        $case=1;
+        $data=['case'=>$case, 'a'=>$aa];
+        return view('about',$data);
     }
 
     /**

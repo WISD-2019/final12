@@ -21,7 +21,6 @@ Route::get('/home', function () {
 
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('reservation',  ['as' => 'reservation.index',    'uses' => 'ReservationController@index']);
 Route::get('welcome',  ['as' => 'welcome.index',    'uses' => 'WelcomeController@index']);
 
 // 後台
@@ -38,5 +37,5 @@ Route::group(['prefix' => 'admin'], function() {
 // 前台
 Route::get('posts', ['as' => 'posts.index',   'uses' => 'PostsController@index']);
 Route::get('post',  ['as' => 'posts.show',    'uses' => 'PostsController@show']);
-Route::get('about',    ['as' => 'posts.about',   'uses' => 'PostsController@about']);
+Route::get('about',    ['as' => 'posts.about',   'uses' => 'AboutController@index']);
 Route::get('contact',  ['as' => 'posts.contact', 'uses' => 'PostsController@contact']);
