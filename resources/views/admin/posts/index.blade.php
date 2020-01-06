@@ -7,11 +7,11 @@
 <div class="row">
     <div class="col-lg-12">
         <h1 class="page-header">
-            文章管理 <small>所有文章列表</small>
+            旅遊方案管理 <small>所有旅遊方案</small>
         </h1>
         <ol class="breadcrumb">
             <li class="active">
-                <i class="fa fa-edit"></i> 文章管理
+                <i class="fa fa-edit"></i> 旅遊方案管理
             </li>
         </ol>
     </div>
@@ -20,7 +20,7 @@
 
 <div class="row" style="margin-bottom: 20px; text-align: right">
     <div class="col-lg-12">
-        <a href="{{ route('admin.posts.create') }}" class="btn btn-success">建立新文章</a>
+        <a href="{{ route('admin.posts.create') }}" class="btn btn-success">建立新旅遊</a>
     </div>
 </div>
 <!-- /.row -->
