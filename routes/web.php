@@ -22,10 +22,7 @@ Route::get('/home', function () {
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('reservation',  ['as' => 'reservation.index',    'uses' => 'ReservationController@index']);
-Route::get('tourcase',  ['as' => 'tourcase.index', 'uses' => 'TourcaseController@index']);
-
-Route::post('/tourcase', 'TourcaseController@store');
-Route::delete('/tourcase/{tourcase}', 'TourcaseController@destroy');
+Route::get('welcome',  ['as' => 'welcome.index',    'uses' => 'WelcomeController@index']);
 
 // 後台
 Route::group(['prefix' => 'admin'], function() {

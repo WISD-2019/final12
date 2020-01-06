@@ -40,6 +40,9 @@
             <li>
                 <a href="{{ route('admin.posts.index') }}"><i class="fa fa-fw fa-edit"></i>旅遊方案管理</a>
             </li>
+            <li>
+                <a href="{{ route('welcome.index') }}"><i class="fa fa-fw fa-edit"></i>回首頁</a>
+            </li>
         </ul>
     </div>
     <!-- /.navbar-collapse -->
