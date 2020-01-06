@@ -1,7 +1,11 @@
 <?php
 
 namespace App;
-
+use App\Reservation;
+use App\Member;
+use App\Tourgroup;
+use App\User;
+use App\Tourcase;
 use Illuminate\Database\Eloquent\Model;
 
 class Staff extends Model

@@ -4,6 +4,8 @@ namespace App;
 use App\User;
 use App\Member;
 use App\Tourgroup;
+use App\Staff;
+use App\Tourcase;
 use Illuminate\Database\Eloquent\Model;
 
 class Reservation extends Model

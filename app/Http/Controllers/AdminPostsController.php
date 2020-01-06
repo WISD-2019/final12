@@ -4,13 +4,13 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Requests\PostRequest;
-use App\Member;
+use App\Tourcase;
 class AdminPostsController extends Controller
 {
     public function index()
     {
-        $Member=Member::orderBy('created_at','DESC')->get();
-        $data=['member'=>$Member];
+        $Tourcase=Tourcase::orderBy('created_at','DESC')->get();
+        $data=['tourcase'=>$Tourcase];
         return view('admin.posts.index',$data);
     }
 
@@ -21,25 +21,25 @@ class AdminPostsController extends Controller
 
     public function edit($id)
     {
-        $Member=member::find($id);
-        $data=['member'=>$Member];
+        $Tourcase=Tourcase::find($id);
+        $data=['tourcase'=>$Tourcase];
         return view('admin.posts.edit',$data);
     }
 
     public function store(Request $request)
     {
-        Member::create($request->all());
+        Tourcase::create($request->all());
         return redirect()->route('admin.posts.index');
     }
     public function update(Request $request,$id)
     {
-        $post = Member::find($id);
+        $post = Tourcase::find($id);
         $post->update($request->all());
         return redirect()->route('admin.posts.index');
     }
     public function destroy($id)
     {
-        Member::destroy($id);
+        Tourcase::destroy($id);
         return redirect()->route('admin.posts.index');
     }
 }

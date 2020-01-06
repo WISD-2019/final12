@@ -33,8 +33,8 @@
             </div>
 
             <div class="form-group">
-                <label>地點：</label>
-                <input name="place" class="form-control" placeholder="請輸入旅遊地點">
+                <label>地點內容說明：</label>
+                <textarea name="place" class="form-control" rows="10" placeholder="請輸入旅遊地點與內容說明"></textarea>
             </div>
 
             <div class="form-group">
@@ -42,13 +42,7 @@
                 <input name="price" class="form-control" placeholder="請輸入價錢">
             </div>
 
-            <div class="form-group">
-                <label>精選</label>
-                <select name="is_feature" class="form-control">
-                    <option value="0">否</option>
-                    <option value="1">是</option>
-                </select>
-            </div>
+
 
             <div class="text-right">
                 <button type="submit" class="btn btn-success">新增</button>
