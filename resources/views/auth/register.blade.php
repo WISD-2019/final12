@@ -64,7 +64,7 @@
                             <label for="type" class="col-md-4 col-form-label text-md-right">{{ __('type') }}</label>
 
                             <div class="col-md-6">
-                                <input id="type" type="type" class="form-control @error('type') is-invalid @enderror" name="type" value="{{ old('type') }}" required autocomplete="type">
+                                <input id="type" type="text" class="form-control @error('type') is-invalid @enderror" name="type" value="{{ old('type') }}" required autocomplete="type">
 
                                 @error('type')
                                 <span class="invalid-feedback" role="alert">
