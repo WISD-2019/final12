@@ -1,7 +1,9 @@
 <?php
 
 namespace App;
-
+use App\Reservation;
+use App\User;
+use App\Tourgroup;
 use Illuminate\Database\Eloquent\Model;
 
 class Member extends Model
@@ -10,8 +12,12 @@ class Member extends Model
     {
         return $this->belongsTo(User::class);
     }
-    public function reservations()
+    public function reservation()
     {
         return $this->hasMany(Reservation::class);
     }
+    protected $fillable = [
+        'user_id',
+        'name',
+        'phone',];
 }

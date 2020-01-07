@@ -15,12 +15,13 @@ class CreateReservationsTable extends Migration
     {
         Schema::create('reservations', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('name');
+
             $table->integer('member_id');
             $table->integer('tourgroup_id');
-            $table->integer('date');
-            $table->integer('people');
-            $table->integer('area');
+            $table->datetime('reservation_in');
+            $table->datetime('reservation_out');
+            $table->string('people');
+            $table->string('area');
             $table->timestamps();
 
         });

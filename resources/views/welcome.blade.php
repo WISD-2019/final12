@@ -71,6 +71,7 @@
                 <div class="top-right links">
                     @auth
                         <a href="{{ url('/home') }}">Home</a>
+
                     @else
                         <a href="{{ route('login') }}">登入</a>
 
@@ -87,9 +88,8 @@
                 </div>
 
                 <div class="links">
-                    <a href=>預約行程</a>
-                    <a href=></a>
-                    <a href=></a>
+                    <a href="{{route('posts.about')}}">預約行程</a>
+                    <a href="{{route('admin.posts.index')}}">前往後端</a>
                 </div>
             </div>
         </div>

@@ -2,6 +2,11 @@
 
 namespace App;
 
+use App\Reservation;
+use App\Member;
+use App\Tourgroup;
+use App\Staff;
+use App\Tourcase;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -15,8 +20,10 @@ class User extends Authenticatable
      *
      * @var array
      */
+
+
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password','type',
     ];
 
     /**
@@ -40,8 +47,8 @@ class User extends Authenticatable
     {
         return $this->hasOne(Member::class);
     }
-    public function staff()
+    public function tourcases()
     {
-        return $this->hasOne(Staff::class);
+        return $this->hasMany(tourcase::class);
     }
 }

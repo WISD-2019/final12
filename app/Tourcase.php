@@ -2,12 +2,20 @@
 
 namespace App;
 
+use App\Reservation;
+use App\Member;
+use App\Tourgroup;
+use App\Staff;
+use App\Users;
 use Illuminate\Database\Eloquent\Model;
 
 class Tourcase extends Model
 {
-    public function tourgroup()
+    protected $table = 'tourcases';
+    protected $fillable = ['tourname','place','price',];
+
+    public function staffs()
     {
-        return $this->hasMany(Tourgroup::class);
+        return $this->belongsTo(Staff::class);
     }
 }
