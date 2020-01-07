@@ -14,7 +14,6 @@ class ReservationController extends Controller
      */
     public function index()
     {
-        //
     }
 
     /**
@@ -67,10 +66,11 @@ class ReservationController extends Controller
      * @param  \App\Reservation  $reservation
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Reservation $reservation)
+    public function update(Request $request)
     {
-        //
+
     }
+
 
     /**
      * Remove the specified resource from storage.
