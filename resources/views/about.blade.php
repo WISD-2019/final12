@@ -41,9 +41,13 @@
                             <td>{{$as -> place}}</td>
                             <td>{{$as -> price}}</td>
                             <td>
-                            <button type="button" class="btnSelect btn btn-danger" data-toggle="modal" data-target="#exampleModal2" >
-                                選擇
-                            </button>
+                                <form action="/posts" method="POST">
+                                    {{ csrf_field() }}
+                                    <input type = "hidden" id = "delete_id" name = "id" value = "{{$as->id}}">
+
+                                    <button type="submit" class="btn btn-danger">預約</button>
+                                </form>
+
                             </td>
                         </tr>
                     @endforeach

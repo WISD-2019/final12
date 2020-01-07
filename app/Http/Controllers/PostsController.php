@@ -7,10 +7,11 @@ use Illuminate\Http\Request;
 class PostsController extends Controller
 {
     //
-    public function index()
+    public function index(Request $request)
     {
-        //
-        return view('index');
+        $a=$request->input("id");
+
+        return view('post',['a'=>$a]);
     }
 
     public function show()

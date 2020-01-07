@@ -40,7 +40,7 @@ Route::get('/Kaohsiung', 'KaohsiungController@index');
     Route::get('posts/{id}/edit', ['as' => 'admin.posts.edit'  , 'uses' => 'AdminPostsController@edit']);
 });
 // 前台
-Route::get('posts', ['as' => 'posts.index',   'uses' => 'PostsController@index']);
+Route::post('posts', ['as' => 'posts.index',   'uses' => 'PostsController@index']);
 Route::get('post',  ['as' => 'posts.show',    'uses' => 'PostsController@show']);
 Route::get('about',    ['as' => 'posts.about',   'uses' => 'AboutController@index']);
 Route::get('contact',  ['as' => 'posts.contact', 'uses' => 'PostsController@contact']);
