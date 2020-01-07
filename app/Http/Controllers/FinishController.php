@@ -2,19 +2,27 @@
 
 namespace App\Http\Controllers;
 
+use App\Reservation;
+use App\Tourcase;
 use App\Tourgroup;
 use Illuminate\Http\Request;
 
-class TourgroupController extends Controller
+class FinishController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        //
+        $res = new Reservation;
+        $res->tourcase_id = $request->input("id");
+        $res->people = $request->input("people");
+        $res->r_time = $request->input("r_time");
+        $res->save();
+
+        return view('contact');
     }
 
     /**
