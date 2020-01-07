@@ -39,6 +39,7 @@ Route::get('/Kaohsiung', 'KaohsiungController@index');
     Route::delete('posts/{id}',['as'=>'admin.posts.destroy','uses'=>'AdminPostsController@destroy']);
     Route::get('posts/{id}/edit', ['as' => 'admin.posts.edit'  , 'uses' => 'AdminPostsController@edit']);
     Route::get('/check', ['as' => 'admin.check', 'uses' => 'AdminPostsController@check']);
+    Route::get('/check2', ['as' => 'admin.check2', 'uses' => 'AdminPostsController@check2']);
 });
 // 前台
 Route::post('posts', ['as' => 'posts.index',   'uses' => 'PostsController@index']);

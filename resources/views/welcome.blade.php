@@ -88,7 +88,7 @@
                 </div>
 
                 <div class="links">
-                    <a href="{{route('posts.about')}}">預約行程</a>
+                    <a href="{{route('admin.check2')}}">預約行程</a>
 
                     <a href="{{route('admin.check')}}">前往後端</a>
 
