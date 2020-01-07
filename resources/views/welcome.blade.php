@@ -70,7 +70,7 @@
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
-                        <a href="{{ url('/home') }}">Home</a>
+                        <a href="{{ url('/home') }}">首頁</a>
 
                     @else
                         <a href="{{ route('login') }}">登入</a>
@@ -89,7 +89,9 @@
 
                 <div class="links">
                     <a href="{{route('posts.about')}}">預約行程</a>
-                    <a href="{{route('admin.posts.index')}}">前往後端</a>
+
+                    <a href="{{route('admin.check')}}">前往後端</a>
+
                 </div>
             </div>
         </div>
