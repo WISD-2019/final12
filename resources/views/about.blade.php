@@ -22,13 +22,12 @@
     <div class="row">
         <div class="col-lg-12">
             <div class="table-responsive">
-                <table class="table table-bordered table-hover">
+                <table width="500" class="table table-bordered table-hover">
                     <thead>
                     <tr>
                         <th width="15" style="text-align: center">編號</th>
-                        <th width="80" style="text-align: center">旅遊名稱</th>
-                        <th width="120" style="text-align: center">地點內容說明</th>
-                        <th width="50" style="text-align: center">價錢</th>
+                        <th width="200" style="text-align: center">旅遊名稱</th>
+                        <th width="200" style="text-align: center">價錢</th>
                         <th width="50" style="text-align: center">選擇</th>
 
                     </tr>
@@ -36,16 +35,15 @@
                     <tbody id="Mytable">
                     @foreach($a as $as)
                         <tr>
-                            <td>{{$as -> id}}</td>
-                            <td>{{$as -> tourname}}</td>
-                            <td>{{$as -> place}}</td>
-                            <td>{{$as -> price}}</td>
-                            <td>
+                            <td align="center">{{$as -> id}}</td>
+                            <td align="center">{{$as -> tourname}}</td>
+                            <td align="center">{{$as -> price}}</td>
+                            <td align="center">
                                 <form action="/posts" method="POST">
                                     {{ csrf_field() }}
-                                    <input type = "hidden" id = "delete_id" name = "id" value = "{{$as->id}}">
+                                    <input type = "hidden" id = "id" name = "id" value = "{{$as->id}}">
 
-                                    <button type="submit" class="btn btn-danger">預約</button>
+                                    <button type="submit" class="btn btn-danger">選擇</button>
                                 </form>
 
                             </td>
