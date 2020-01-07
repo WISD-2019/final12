@@ -40,8 +40,23 @@
                         <td align="center">{{$a_place}}</td>
                         <td align="center">{{$a_price}}</td>
                     </tr>
+
                     </tbody>
                 </table>
+                <form action="/finish" method="POST">
+                    {{ csrf_field() }}
+                <div class="form-group">
+                    <label>參團人數：</label>
+                    <input size="20" name="people"  placeholder="請輸入人數">
+                </div>
+                <div class="form-group">
+                    <label>預定出遊日期：</label>
+                    <input  type="datetime-local" name="r_time"  >
+                </div>
+                <div class="text-right">
+                    <button  name="id" type="submit" class="btn btn-success" value = {{$a_id}}>完成</button>
+                </div>
+                </form>
             </div>
         </div>
     </div>

@@ -44,4 +44,4 @@ Route::post('posts', ['as' => 'posts.index',   'uses' => 'PostsController@index'
 Route::get('post',  ['as' => 'posts.show',    'uses' => 'PostsController@show']);
 Route::get('about',    ['as' => 'posts.about',   'uses' => 'AboutController@index']);
 Route::get('contact',  ['as' => 'posts.contact', 'uses' => 'PostsController@contact']);
-
+Route::post('finish',  ['as' => 'finish.index', 'uses' => 'FinishController@index']);

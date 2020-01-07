@@ -16,12 +16,9 @@ class CreateReservationsTable extends Migration
         Schema::create('reservations', function (Blueprint $table) {
             $table->bigIncrements('id');
 
-            $table->integer('member_id');
-            $table->integer('tourgroup_id');
-            $table->datetime('reservation_in');
-            $table->datetime('reservation_out');
-            $table->string('people');
-            $table->string('area');
+            $table->integer('tourcase_id');
+            $table->datetime('r_time')->nullable();
+            $table->string('people')->nullable();
             $table->timestamps();
 
         });
