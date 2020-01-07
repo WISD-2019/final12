@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Http\Requests\PostRequest;
 use App\Tourcase;
 use Auth;
+
+
 class AdminPostsController extends Controller
 {
 
@@ -17,10 +19,24 @@ class AdminPostsController extends Controller
     }
     public function check()
     {
-        if(Auth::user()->type==2) {
-            return view('admin.dashboard.index');
+        if (Auth::check())
+        {
+            if(Auth::user()->type==2) {
+                return view('admin.dashboard.index');
+            }
+            return redirect('/');
         }
-        return redirect('/');
+        return redirect('/login');
+        
+    }
+
+    public function check2()
+    {
+        if (Auth::check())
+        {
+            return redirect('/about');
+        }
+        return redirect('/login');
     }
 
     public function create()
