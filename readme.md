@@ -1,72 +1,72 @@
-<p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
+<p align="center"><img src="https://i.imgur.com/CAd3MkH.png</p>
+https://i.imgur.com/v4pzFru.jpg
+https://i.imgur.com/Y2uc3Mm.jpg
+https://i.imgur.com/GjnYcKn.jpg
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+## Go Travel
+我們這個旅遊網站的核心是由管理者提供旅遊景點，會員透過系統可以選擇他喜愛的旅遊地點，進行預約。
+## 系統的主要功能
 
-## About Laravel
+•	前端
+判斷是客戶還是管理者(Route::get('/check'))3A432055 陳冠豪
+判斷登入後才能進入預約畫面(Route::get('/check2'))3A432055 陳冠豪
+查看可預約旅遊方案(Route::get('about'))3A632076 林明穎
+選擇預約的旅遊方案(Route::post('posts')) 3A632076 林明穎
+完成預約(Route::get('finish')) 3A632076 林明穎
+•	後端
+旅遊方案管理
+新增旅遊方案Route::get('posts/create'))  3A632076 林明穎
+修改旅遊方案Route::patch('posts/{id}')) 3A632076 林明穎
+刪除旅遊方案Route::delete('posts/{id}')) 3A632076 林明穎
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## 初始專案與DB負責的同學
+初始專案 3A432055陳冠豪
+資料庫及資料表建立、資料表關連 3A632076林明穎
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## 額外使用的套件或樣板
+•	前台樣板-Clean Blog
+-畫面供使用者使用，且使用起來方便且舒適。
+•	後台樣板
+-簡易操作的畫面，供管理者使用。
 
-## Learning Laravel
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## 系統復原步驟
+複製https://github.com/WISD-2019/final12.git 本系統在GitHub的專案，打開Source tree，點選clone後，輸入以下資料
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Source Path:https://github.com/WISD-2019/final12.git
+Destination Path:C:\wagon\uwamp\www\final12
+打開cmder，切換至專案所在資料夾，cd final12
 
-## Laravel Sponsors
+在cmder輸入以下命令，以復原此系統：
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+composer install
+composer run‐script post‐root‐package‐install
+composer run‐script post‐create‐project‐cmd
+將專案打開 在.env檔案內輸入資料庫主機IP、Port、名稱、與帳密如下：
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[British Software Development](https://www.britishsoftware.co)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- [UserInsights](https://userinsights.com)
-- [Fragrantica](https://www.fragrantica.com)
-- [SOFTonSOFA](https://softonsofa.com/)
-- [User10](https://user10.com)
-- [Soumettre.fr](https://soumettre.fr/)
-- [CodeBrisk](https://codebrisk.com)
-- [1Forge](https://1forge.com)
-- [TECPRESSO](https://tecpresso.co.jp/)
-- [Runtime Converter](http://runtimeconverter.com/)
-- [WebL'Agence](https://weblagence.com/)
-- [Invoice Ninja](https://www.invoiceninja.com)
-- [iMi digital](https://www.imi-digital.de/)
-- [Earthlink](https://www.earthlink.ro/)
-- [Steadfast Collective](https://steadfastcollective.com/)
-- [We Are The Robots Inc.](https://watr.mx/)
-- [Understand.io](https://www.understand.io/)
-- [Abdel Elrafa](https://abdelelrafa.com)
-- [Hyper Host](https://hyper.host)
+DB_HOST=127.0.0.1
+DB_PORT=33060
+DB_DATABASE=final12
+DB_USERNAME=root
+DB_PASSWORD=root
+在cmder輸入以下命令，將所有資料表產生至final12資料庫內
 
-## Contributing
+php artisan migrate
+開啟UwAmp，點選PHPMyAdmin，輸入以下資料後並點擊登入，進入MySQL後，建立新資料庫，名稱為final12，將final12.sql(C:\wagon\uwamp\www\final12\database\final12.sql)匯入
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+資料庫系統:MYSQL
+伺服器:localhost:33060
+帳號:root
+密碼:root
+在UwAmp下，點選Apache config，選擇port 8000 ，並在Document Root 輸入{DOCUMENTPATH}/final12/public
 
-## Security Vulnerabilities
+## 系統使用帳號
+前台-會員
+後台-管理者
+都可自行註冊，自己選管理者或會員
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+## 系統開發人員
 
-## License
-
-The Laravel framework is open-source software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+•	3A432055 陳冠豪
+•	3A632076 林明穎
