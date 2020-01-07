@@ -1,5 +1,5 @@
 @extends('layouts.master')
-@section('title', '可預約房間')
+@section('title', '可預約旅遊方案')
 @section('content')
     <!-- Page Header -->
     <!-- Set your background image for this header on the line below. -->

@@ -61,7 +61,7 @@
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="type" class="col-md-4 col-form-label text-md-right">{{ __('type') }}</label>
+                            <label for="type" class="col-md-4 col-form-label text-md-right">{{ __('輸入1是會員/2是管理員') }}</label>
 
                             <div class="col-md-6">
                                 <input id="type" type="text" class="form-control @error('type') is-invalid @enderror" name="type" value="{{ old('type') }}" required autocomplete="type">
